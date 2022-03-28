@@ -9,9 +9,10 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("muhammadluthfias/flask-test")
+        step {
+            sh "sudo docker build -i muhammadluthfias/flask-test ."
+        }   
     }
-
     stage('Test image') {
   
 
